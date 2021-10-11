@@ -32,6 +32,7 @@
     </table>
 
     <script>
+        var szamlalo = 0;
         $(function () {
             uj_sor_hozzaadasa();
         });
@@ -40,7 +41,20 @@
             var url = "https://aws.random.cat/meow";
             $.get(url,
                 function (data, textStatus, jqXHR) {
-                    console.log(data);
+                    if (textStatus == "success") {
+                        szamlalo++;
+                        var datum = new Date();
+                        var idopont = datum.toLocaleString();
+                        var uj_sor = `
+                        <tr>
+                            <td>`+szamlalo+`</td>
+                            <td>`+idopont+`</td>
+                            <td><img src="`+data.file+`"alt=macska"</td>
+                        </tr>
+                        `;
+                        console.log(uj_sor);
+                    }
+                    
                 },
                 "json"
             );
