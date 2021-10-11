@@ -32,8 +32,18 @@
     </table>
 
     <script>
+        $(function () {
+            uj_sor_hozzaadasa();
+        });
+
         function uj_sor_hozzaadasa() {
             var url = "https://aws.random.cat/meow";
+            $.get(url,
+                function (data, textStatus, jqXHR) {
+                    console.log(data);
+                },
+                "json"
+            );
         }
     </script>
 </body>
