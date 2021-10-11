@@ -1,2 +1,2 @@
-# MacskasWeboldal
+# Macskás Weboldal
 IKT óra teszt
