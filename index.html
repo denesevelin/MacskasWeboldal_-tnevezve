@@ -50,12 +50,13 @@
                         <tr>
                             <td>`+szamlalo+`</td>
                             <td>`+idopont+`</td>
-                            <td><img src="`+data.file+`"alt=macska"</td>
+                            <td><img height="100px" src="`+data.file+`"alt=macska"</td>
                         </tr>
                         `;
-                        console.log(uj_sor);
+                        var tablazat_tartalma = $("#macskas_tablazat").html();
+                        var html = uj_sor + tablazat_tartalma;
+                        $("#macskas_tablazat").html(html);
                     }
-                    
                 },
                 "json"
             );
